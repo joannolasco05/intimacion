@@ -186,6 +186,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </div>
         </div>
     </div>
+    <?= $this->Flash->render('auth') ?>
     <footer>
     </footer>
 </body>

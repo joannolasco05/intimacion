@@ -43,8 +43,9 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-       $this->loadComponent('Auth',
+        $this->loadComponent('Auth',
             [
+                'authorize' => ['Controller'],
                 'authenticate' => [
                     'Form' => [
                         'fields' => [
@@ -63,6 +64,14 @@ class AppController extends Controller
         );
         
         $this->Auth->allow(['display']);
+    }
+    
+    public function isAuthorized($user){
+        if(isset($user['session']) && $user['session'] === 'admin'){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     /**

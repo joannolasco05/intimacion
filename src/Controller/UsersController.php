@@ -121,4 +121,11 @@ class UsersController extends AppController
         return $this->redirect($this->Auth->logout());
     }
     
+    public function isAuthorized($user){
+        if(in_array($this->request->action, ['login','logout'])){
+            return true;
+        }else{
+            return parent::isAuthorized($user);
+        }
+    }
 }
