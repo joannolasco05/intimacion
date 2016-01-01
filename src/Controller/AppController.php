@@ -43,7 +43,7 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-        $this->loadComponent('Auth',
+       $this->loadComponent('Auth',
             [
                 'authenticate' => [
                     'Form' => [
@@ -56,7 +56,7 @@ class AppController extends Controller
             ],
             [
                 'loginAction' => [
-                    'controller' => 'User',
+                    'controller' => 'Users',
                     'action' => 'login'
                 ]
             ]
