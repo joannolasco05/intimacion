@@ -28,7 +28,7 @@
             echo $this->Form->input('fecha_saldo', ['empty' => true]);
             echo $this->Form->input('plazo');
             echo $this->Form->input('tasa');
-            echo $this->Form->input('fiador_id', ['options' => $fiadores]);
+            echo $this->Form->input('fiador_id', ['options' => $fiadores, 'empty' => true]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

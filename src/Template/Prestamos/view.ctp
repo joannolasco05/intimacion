@@ -72,28 +72,26 @@
             <tr>
                 <th><?= __('Id') ?></th>
                 <th><?= __('Prestamo Id') ?></th>
-                <th><?= __('Capital') ?></th>
-                <th><?= __('Mora') ?></th>
-                <th><?= __('Interes') ?></th>
-                <th><?= __('Saldo Capital') ?></th>
-                <th><?= __('Saldo Mora') ?></th>
-                <th><?= __('Saldo Interes') ?></th>
                 <th><?= __('Fecha Generacion') ?></th>
                 <th><?= __('Fecha Limite') ?></th>
+                <th><?= __('Status') ?></th>
+                <th><?= __('Monto') ?></th>
+                <th><?= __('Capital') ?></th>
+                <th><?= __('Interes') ?></th>
+                <th><?= __('Mora') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($prestamo->cuotas as $cuotas): ?>
             <tr>
                 <td><?= h($cuotas->id) ?></td>
                 <td><?= h($cuotas->prestamo_id) ?></td>
-                <td><?= h($cuotas->capital) ?></td>
-                <td><?= h($cuotas->mora) ?></td>
-                <td><?= h($cuotas->interes) ?></td>
-                <td><?= h($cuotas->saldo_capital) ?></td>
-                <td><?= h($cuotas->saldo_mora) ?></td>
-                <td><?= h($cuotas->saldo_interes) ?></td>
                 <td><?= h($cuotas->fecha_generacion) ?></td>
                 <td><?= h($cuotas->fecha_limite) ?></td>
+                <td><?= h($cuotas->status) ?></td>
+                <td><?= h($cuotas->monto) ?></td>
+                <td><?= h($cuotas->capital) ?></td>
+                <td><?= h($cuotas->interes) ?></td>
+                <td><?= h($cuotas->mora) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Cuotas', 'action' => 'view', $cuotas->id]) ?>
 

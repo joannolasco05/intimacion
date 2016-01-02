@@ -27,7 +27,7 @@ class PrestamosFixture extends TestFixture
         'fecha_saldo' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'plazo' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'tasa' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
-        'fiador_id' => ['type' => 'integer', 'length' => 7, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'fiador_id' => ['type' => 'integer', 'length' => 7, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         '_indexes' => [
             'id' => ['type' => 'index', 'columns' => ['id'], 'length' => []],
             'cliente_id' => ['type' => 'index', 'columns' => ['cliente_id'], 'length' => []],
@@ -35,8 +35,8 @@ class PrestamosFixture extends TestFixture
         ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            'prestamos_ibfk_2' => ['type' => 'foreign', 'columns' => ['fiador_id'], 'references' => ['fiadores', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
             'prestamos_ibfk_1' => ['type' => 'foreign', 'columns' => ['cliente_id'], 'references' => ['clientes', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
+            'prestamos_ibfk_2' => ['type' => 'foreign', 'columns' => ['fiador_id'], 'references' => ['fiadores', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -52,14 +52,14 @@ class PrestamosFixture extends TestFixture
      */
     public $records = [
         [
-            'id' => 'dfd6bc50-1dc1-43e3-98f2-d3e49d182851',
+            'id' => '1cb9c5c2-0e5e-4ad3-9dd5-5d59f163d8cf',
             'cliente_id' => 1,
             'monto_solicitado' => 1,
             'monto_aprobado' => 1,
             'monto_desembolsado' => 1,
-            'fecha_aprobacion' => '2016-01-01',
-            'fecha_desembolso' => '2016-01-01',
-            'fecha_saldo' => '2016-01-01',
+            'fecha_aprobacion' => '2016-01-02',
+            'fecha_desembolso' => '2016-01-02',
+            'fecha_saldo' => '2016-01-02',
             'plazo' => 1,
             'tasa' => 1,
             'fiador_id' => 1

@@ -38,8 +38,7 @@ class PrestamosTable extends Table
             'joinType' => 'INNER'
         ]);
         $this->belongsTo('Fiadores', [
-            'foreignKey' => 'fiador_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'fiador_id'
         ]);
         $this->hasMany('Cuotas', [
             'foreignKey' => 'prestamo_id'
