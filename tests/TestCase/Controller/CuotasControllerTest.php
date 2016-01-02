@@ -20,6 +20,7 @@ class CuotasControllerTest extends IntegrationTestCase
         'app.prestamos',
         'app.clientes',
         'app.garantias',
+        'app.vehiculos',
         'app.intimaciones',
         'app.fiadores'
     ];

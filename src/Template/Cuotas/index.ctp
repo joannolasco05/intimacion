@@ -13,11 +13,11 @@
             <tr>
                 <th><?= $this->Paginator->sort('id') ?></th>
                 <th><?= $this->Paginator->sort('prestamo_id') ?></th>
+                <th><?= $this->Paginator->sort('fecha_generacion') ?></th>
+                <th><?= $this->Paginator->sort('fecha_limite') ?></th>
+                <th><?= $this->Paginator->sort('status') ?></th>
+                <th><?= $this->Paginator->sort('monto') ?></th>
                 <th><?= $this->Paginator->sort('capital') ?></th>
-                <th><?= $this->Paginator->sort('mora') ?></th>
-                <th><?= $this->Paginator->sort('interes') ?></th>
-                <th><?= $this->Paginator->sort('saldo_capital') ?></th>
-                <th><?= $this->Paginator->sort('saldo_mora') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -26,11 +26,11 @@
             <tr>
                 <td><?= $this->Number->format($cuota->id) ?></td>
                 <td><?= $cuota->has('prestamo') ? $this->Html->link($cuota->prestamo->id, ['controller' => 'Prestamos', 'action' => 'view', $cuota->prestamo->id]) : '' ?></td>
+                <td><?= h($cuota->fecha_generacion) ?></td>
+                <td><?= h($cuota->fecha_limite) ?></td>
+                <td><?= h($cuota->status) ?></td>
+                <td><?= $this->Number->format($cuota->monto) ?></td>
                 <td><?= $this->Number->format($cuota->capital) ?></td>
-                <td><?= $this->Number->format($cuota->mora) ?></td>
-                <td><?= $this->Number->format($cuota->interes) ?></td>
-                <td><?= $this->Number->format($cuota->saldo_capital) ?></td>
-                <td><?= $this->Number->format($cuota->saldo_mora) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $cuota->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cuota->id]) ?>

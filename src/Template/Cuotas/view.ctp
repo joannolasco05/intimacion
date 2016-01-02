@@ -17,32 +17,28 @@
             <td><?= $cuota->has('prestamo') ? $this->Html->link($cuota->prestamo->id, ['controller' => 'Prestamos', 'action' => 'view', $cuota->prestamo->id]) : '' ?></td>
         </tr>
         <tr>
+            <th><?= __('Status') ?></th>
+            <td><?= h($cuota->status) ?></td>
+        </tr>
+        <tr>
             <th><?= __('Id') ?></th>
             <td><?= $this->Number->format($cuota->id) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Monto') ?></th>
+            <td><?= $this->Number->format($cuota->monto) ?></td>
         </tr>
         <tr>
             <th><?= __('Capital') ?></th>
             <td><?= $this->Number->format($cuota->capital) ?></td>
         </tr>
         <tr>
-            <th><?= __('Mora') ?></th>
-            <td><?= $this->Number->format($cuota->mora) ?></td>
-        </tr>
-        <tr>
             <th><?= __('Interes') ?></th>
             <td><?= $this->Number->format($cuota->interes) ?></td>
         </tr>
         <tr>
-            <th><?= __('Saldo Capital') ?></th>
-            <td><?= $this->Number->format($cuota->saldo_capital) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Saldo Mora') ?></th>
-            <td><?= $this->Number->format($cuota->saldo_mora) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Saldo Interes') ?></th>
-            <td><?= $this->Number->format($cuota->saldo_interes) ?></td>
+            <th><?= __('Mora') ?></th>
+            <td><?= $this->Number->format($cuota->mora) ?></td>
         </tr>
         <tr>
             <th><?= __('Fecha Generacion') ?></th>

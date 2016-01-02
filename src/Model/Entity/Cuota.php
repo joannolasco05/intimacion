@@ -9,14 +9,13 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $prestamo_id
  * @property \App\Model\Entity\Prestamo $prestamo
- * @property float $capital
- * @property float $mora
- * @property float $interes
- * @property float $saldo_capital
- * @property float $saldo_mora
- * @property float $saldo_interes
  * @property \Cake\I18n\Time $fecha_generacion
  * @property \Cake\I18n\Time $fecha_limite
+ * @property string $status
+ * @property float $monto
+ * @property float $capital
+ * @property float $interes
+ * @property float $mora
  */
 class Cuota extends Entity
 {

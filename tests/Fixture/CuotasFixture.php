@@ -19,14 +19,13 @@ class CuotasFixture extends TestFixture
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'prestamo_id' => ['type' => 'string', 'length' => 50, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
-        'capital' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
-        'mora' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
-        'interes' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
-        'saldo_capital' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
-        'saldo_mora' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
-        'saldo_interes' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
         'fecha_generacion' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'fecha_limite' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+        'status' => ['type' => 'string', 'length' => 50, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
+        'monto' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
+        'capital' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
+        'interes' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
+        'mora' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
         '_indexes' => [
             'id' => ['type' => 'index', 'columns' => ['id'], 'length' => []],
             'prestamo_id' => ['type' => 'index', 'columns' => ['prestamo_id'], 'length' => []],
@@ -51,14 +50,13 @@ class CuotasFixture extends TestFixture
         [
             'id' => 1,
             'prestamo_id' => 'Lorem ipsum dolor sit amet',
+            'fecha_generacion' => '2016-01-02',
+            'fecha_limite' => '2016-01-02',
+            'status' => 'Lorem ipsum dolor sit amet',
+            'monto' => 1,
             'capital' => 1,
-            'mora' => 1,
             'interes' => 1,
-            'saldo_capital' => 1,
-            'saldo_mora' => 1,
-            'saldo_interes' => 1,
-            'fecha_generacion' => '2016-01-01',
-            'fecha_limite' => '2016-01-01'
+            'mora' => 1
         ],
     ];
 }

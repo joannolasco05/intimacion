@@ -48,36 +48,31 @@ class CuotasTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->add('capital', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('capital');
-
-        $validator
-            ->add('mora', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('mora');
-
-        $validator
-            ->add('interes', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('interes');
-
-        $validator
-            ->add('saldo_capital', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('saldo_capital');
-
-        $validator
-            ->add('saldo_mora', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('saldo_mora');
-
-        $validator
-            ->add('saldo_interes', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('saldo_interes');
-
-        $validator
             ->add('fecha_generacion', 'valid', ['rule' => 'date'])
             ->allowEmpty('fecha_generacion');
 
         $validator
             ->add('fecha_limite', 'valid', ['rule' => 'date'])
             ->allowEmpty('fecha_limite');
+
+        $validator
+            ->allowEmpty('status');
+
+        $validator
+            ->add('monto', 'valid', ['rule' => 'numeric'])
+            ->allowEmpty('monto');
+
+        $validator
+            ->add('capital', 'valid', ['rule' => 'numeric'])
+            ->allowEmpty('capital');
+
+        $validator
+            ->add('interes', 'valid', ['rule' => 'numeric'])
+            ->allowEmpty('interes');
+
+        $validator
+            ->add('mora', 'valid', ['rule' => 'numeric'])
+            ->allowEmpty('mora');
 
         return $validator;
     }

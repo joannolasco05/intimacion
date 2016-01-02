@@ -21,6 +21,7 @@ class CuotasTableTest extends TestCase
         'app.prestamos',
         'app.clientes',
         'app.garantias',
+        'app.vehiculos',
         'app.intimaciones',
         'app.fiadores'
     ];

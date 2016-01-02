@@ -18,14 +18,13 @@
         <legend><?= __('Edit Cuota') ?></legend>
         <?php
             echo $this->Form->input('prestamo_id', ['options' => $prestamos]);
-            echo $this->Form->input('capital');
-            echo $this->Form->input('mora');
-            echo $this->Form->input('interes');
-            echo $this->Form->input('saldo_capital');
-            echo $this->Form->input('saldo_mora');
-            echo $this->Form->input('saldo_interes');
             echo $this->Form->input('fecha_generacion', ['empty' => true]);
             echo $this->Form->input('fecha_limite', ['empty' => true]);
+            echo $this->Form->input('status');
+            echo $this->Form->input('monto');
+            echo $this->Form->input('capital');
+            echo $this->Form->input('interes');
+            echo $this->Form->input('mora');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
