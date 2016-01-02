@@ -33,8 +33,8 @@
                 <td><?= h($cliente->tipo_identificacion) ?></td>
                 <td><?= h($cliente->identificacion) ?></td>
                 <td><?= h($cliente->direccion) ?></td>
-                <td><?= $this->Number->format($cliente->telefono) ?></td>
-                <td><?= $this->Number->format($cliente->celular) ?></td>
+                <td><?= h($cliente->telefono) ?></td>
+                <td><?= h($cliente->celular) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $cliente->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cliente->id]) ?>

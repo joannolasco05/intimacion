@@ -27,8 +27,8 @@
                 <td><?= h($fiadore->tipo_identificacion) ?></td>
                 <td><?= h($fiadore->identificacion) ?></td>
                 <td><?= h($fiadore->direccion) ?></td>
-                <td><?= $this->Number->format($fiadore->telefono) ?></td>
-                <td><?= $this->Number->format($fiadore->celular) ?></td>
+                <td><?= h($fiadore->telefono) ?></td>
+                <td><?= h($fiadore->celular) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $fiadore->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $fiadore->id]) ?>

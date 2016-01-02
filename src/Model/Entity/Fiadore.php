@@ -11,9 +11,9 @@ use Cake\ORM\Entity;
  * @property string $tipo_identificacion
  * @property string $identificacion
  * @property string $direccion
- * @property int $telefono
- * @property int $celular
- * @property int $oficina
+ * @property string $telefono
+ * @property string $celular
+ * @property string $oficina
  */
 class Fiadore extends Entity
 {

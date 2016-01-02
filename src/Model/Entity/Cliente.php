@@ -11,9 +11,9 @@ use Cake\ORM\Entity;
  * @property string $tipo_identificacion
  * @property string $identificacion
  * @property string $direccion
- * @property int $telefono
- * @property int $celular
- * @property int $oficina
+ * @property string $telefono
+ * @property string $celular
+ * @property string $oficina
  * @property \App\Model\Entity\Garantia[] $garantias
  * @property \App\Model\Entity\Intimacione[] $intimaciones
  * @property \App\Model\Entity\Prestamo[] $prestamos

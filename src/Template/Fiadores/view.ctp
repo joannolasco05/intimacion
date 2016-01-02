@@ -27,20 +27,20 @@
             <td><?= h($fiadore->direccion) ?></td>
         </tr>
         <tr>
-            <th><?= __('Id') ?></th>
-            <td><?= $this->Number->format($fiadore->id) ?></td>
-        </tr>
-        <tr>
             <th><?= __('Telefono') ?></th>
-            <td><?= $this->Number->format($fiadore->telefono) ?></td>
+            <td><?= h($fiadore->telefono) ?></td>
         </tr>
         <tr>
             <th><?= __('Celular') ?></th>
-            <td><?= $this->Number->format($fiadore->celular) ?></td>
+            <td><?= h($fiadore->celular) ?></td>
         </tr>
         <tr>
             <th><?= __('Oficina') ?></th>
-            <td><?= $this->Number->format($fiadore->oficina) ?></td>
+            <td><?= h($fiadore->oficina) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Id') ?></th>
+            <td><?= $this->Number->format($fiadore->id) ?></td>
         </tr>
     </table>
 </div>

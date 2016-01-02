@@ -22,9 +22,9 @@ class ClientesFixture extends TestFixture
         'tipo_identificacion' => ['type' => 'string', 'length' => 50, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
         'identificacion' => ['type' => 'string', 'length' => 50, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
         'direccion' => ['type' => 'string', 'length' => 200, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
-        'telefono' => ['type' => 'biginteger', 'length' => 20, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'celular' => ['type' => 'biginteger', 'length' => 20, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'oficina' => ['type' => 'biginteger', 'length' => 20, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'telefono' => ['type' => 'string', 'length' => 20, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
+        'celular' => ['type' => 'string', 'length' => 20, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
+        'oficina' => ['type' => 'string', 'length' => 20, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
         '_indexes' => [
             'id' => ['type' => 'index', 'columns' => ['id'], 'length' => []],
         ],
@@ -50,9 +50,9 @@ class ClientesFixture extends TestFixture
             'tipo_identificacion' => 'Lorem ipsum dolor sit amet',
             'identificacion' => 'Lorem ipsum dolor sit amet',
             'direccion' => 'Lorem ipsum dolor sit amet',
-            'telefono' => '',
-            'celular' => '',
-            'oficina' => ''
+            'telefono' => 'Lorem ipsum dolor ',
+            'celular' => 'Lorem ipsum dolor ',
+            'oficina' => 'Lorem ipsum dolor '
         ],
     ];
 }

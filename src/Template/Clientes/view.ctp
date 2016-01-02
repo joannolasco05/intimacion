@@ -33,20 +33,20 @@
             <td><?= h($cliente->direccion) ?></td>
         </tr>
         <tr>
-            <th><?= __('Id') ?></th>
-            <td><?= $this->Number->format($cliente->id) ?></td>
-        </tr>
-        <tr>
             <th><?= __('Telefono') ?></th>
-            <td><?= $this->Number->format($cliente->telefono) ?></td>
+            <td><?= h($cliente->telefono) ?></td>
         </tr>
         <tr>
             <th><?= __('Celular') ?></th>
-            <td><?= $this->Number->format($cliente->celular) ?></td>
+            <td><?= h($cliente->celular) ?></td>
         </tr>
         <tr>
             <th><?= __('Oficina') ?></th>
-            <td><?= $this->Number->format($cliente->oficina) ?></td>
+            <td><?= h($cliente->oficina) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Id') ?></th>
+            <td><?= $this->Number->format($cliente->id) ?></td>
         </tr>
     </table>
     <div class="related">
