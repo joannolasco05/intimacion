@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
+use Cake\I18n\Time;
 
 /**
  * Intimaciones Controller
@@ -112,5 +114,13 @@ class IntimacionesController extends AppController
     
     public function isAuthorized($user){
         return true;
+    }
+    
+    public function init(){
+        $time = new Time('15 days ago');
+        $cuotas_table = TableRegistry::get('Cuotas');
+        $cuotas_pending = $cuotas_table->find('all')->contain(['Prestamos'])->where(['status' => 'PENDIENTE'])->where(['fecha_limite <=' => $time]);;
+        $this->set('cuotas', $this->paginate($cuotas_pending));
+        $this->set('_serialize', ['cuotas']);
     }
 }
