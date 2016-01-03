@@ -7,7 +7,7 @@
     </ul>
 </nav>
 <div class="cuotas index large-9 medium-8 columns content">
-    <h3><?= __('Cuotas') ?></h3>
+    <h3><?= __('Prestamos con Cuotas Atrasadas') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -30,10 +30,10 @@
                 <td><?= h($cuota->status) ?></td>
                 <td><?= $this->Number->format($cuota->monto) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $cuota->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cuota->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $cuota->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cuota->id)]) ?>
-                </td>
+                    <?php echo $this->Form->input('intimar', array(
+                                  'type'=>'checkbox',
+                                  'id'=> $this->Number->format($cuota->id), 
+                                  'format' => array('before', 'input', 'between', 'label', 'after', 'error' )))?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
@@ -46,4 +46,5 @@
         </ul>
         <p><?= $this->Paginator->counter() ?></p>
     </div>
+    <div style='text-align:center'><?= $this->Form->button('Iniciar Proceso de Intimacion') ?></div>
 </div>
