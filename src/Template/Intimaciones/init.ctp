@@ -7,6 +7,7 @@
     </ul>
 </nav>
 <div class="cuotas index large-9 medium-8 columns content">
+    <?= $this->Form->create() ?>
     <h3><?= __('Prestamos con Cuotas Atrasadas') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
@@ -32,6 +33,7 @@
                 <td class="actions">
                     <?php echo $this->Form->input('intimar', array(
                                   'type'=>'checkbox',
+                                  'name' => $this->Number->format($cuota->id),
                                   'id'=> $this->Number->format($cuota->id), 
                                   'format' => array('before', 'input', 'between', 'label', 'after', 'error' )))?></td>
             </tr>
@@ -46,5 +48,8 @@
         </ul>
         <p><?= $this->Paginator->counter() ?></p>
     </div>
-    <div style='text-align:center'><?= $this->Form->button('Iniciar Proceso de Intimacion') ?></div>
+    <div style='text-align:center'>
+        <?= $this->Form->button('Iniciar Proceso de Intimacion') ?>
+    </div>
+    <?= $this->Form->create() ?>
 </div>
