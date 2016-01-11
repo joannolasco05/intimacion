@@ -433,6 +433,9 @@ section form,section h1{
     margin-right: 36.5%;
 }*/
 
+.login_label{
+    margin-top: 5%;
+}
 .login_form ,.login_label{
     max-width: 25%;
     margin-left: 36.5%;
@@ -451,6 +454,7 @@ section form button{
 section form button:hover{
     background:#007300;
 }
+
 
 @media screen and (max-width:800px){
     section form,section h1{
