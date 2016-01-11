@@ -433,17 +433,17 @@ section form,section h1{
     margin-right: 36.5%;
 }
 
-#user{
-    background:#088da5;
-    left:30px;
-    margin:0;
-
+#user:hover{
+    border-color: #088da5;
+}
+#password:hover{
+    border-color: #088da5;
 }
 section form button{
     background:#088da5;
 }
 section form button:hover{
-    background:green;
+    background:#007300;
 }
 
 @media screen and (max-width:800px){
