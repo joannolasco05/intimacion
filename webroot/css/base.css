@@ -426,6 +426,36 @@ th {
     padding: 0;
 }
 
+
+section form,section h1{
+    max-width: 25%;
+    margin-left: 36.5%;
+    margin-right: 36.5%;
+}
+
+#user{
+    background:#088da5;
+    left:30px;
+    margin:0;
+
+}
+section form button{
+    background:#088da5;
+}
+section form button:hover{
+    background:green;
+}
+
+@media screen and (max-width:800px){
+    section form,section h1{
+        max-width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        min-width: 200px;
+    }   
+}
+
+
 /*
  * Copyright (c) 2013-2014 ZURB, inc.
 * MIT License
