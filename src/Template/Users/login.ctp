@@ -1,11 +1,9 @@
-<div class="login_form">
-<h1>Login</h1>
+
+<h1 class='login_label'>Login</h1>
 
     
-<?= $this->Form->create() ?>
+<?= $this->Form->create('test',array('class' => 'login_form')) ?>
 <?= $this->Form->input('user') ?>
 <?= $this->Form->input('password') ?>
 <?= $this->Form->button('Login') ?>
 <?= $this->Form->end() ?>
-
-</div>

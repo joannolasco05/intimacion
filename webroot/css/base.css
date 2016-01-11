@@ -433,7 +433,7 @@ section form,section h1{
     margin-right: 36.5%;
 }*/
 
-.login_form h1,.login_form form{
+.login_form ,.login_label{
     max-width: 25%;
     margin-left: 36.5%;
     margin-right: 36.5%;
