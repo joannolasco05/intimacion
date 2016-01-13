@@ -2,6 +2,9 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Error\Debugger;
+use Cake\ORM\TableRegistry;
+use Cake\I18n\Time;
 
 /**
  * Intimaciones Controller
@@ -112,5 +115,34 @@ class IntimacionesController extends AppController
     
     public function isAuthorized($user){
         return true;
+    }
+    
+    public function init(){
+        $intimacione = $this->Intimaciones->newEntity();
+        $time = new Time('15 days ago');
+        $cuotas_table = TableRegistry::get('Cuotas');
+        if ($this->request->is('post')) {
+           $keys = array_keys($this->request->data);
+           foreach($keys as $key){
+              if($this->request->data[$key] === '1'){
+                $resultsArray = $cuotas_table->find()->select(['prestamo_id', 'Prestamos.cliente_id'])->contain(['Prestamos'])->where(['Cuotas.id' => $key])->toArray();  
+                foreach ($resultsArray as $cuota) {
+                    $total = $this->Intimaciones->find()->where(['prestamo_id' => $cuota->prestamo_id])->count();
+                    if($total==0){
+                        $data = array(
+                            'prestamo_id' => $cuota->prestamo_id,
+                            'cliente_id' => "".$cuota->prestamo->cliente_id."",
+                            'status' => 'PENDIENTE'
+                        );
+                        $intimacione = $this->Intimaciones->patchEntity($intimacione, $data);
+                        $this->Intimaciones->save($intimacione);
+                    }
+                }
+              }
+           }   
+        }
+        $cuotas_pending = $cuotas_table->find('all')->contain(['Prestamos'])->where(['status' => 'PENDIENTE'])->where(['fecha_limite <=' => $time])->where(['prestamo_id NOT IN' => ($this->Intimaciones->find()->select('prestamo_id'))]);
+        $this->set('cuotas', $this->paginate($cuotas_pending));
+        $this->set('_serialize', ['cuotas']);
     }
 }
