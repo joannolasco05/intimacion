@@ -13,12 +13,15 @@ use Cake\I18n\Time;
  */
 class IntimacionesController extends AppController
 {
-
+    
+        
+        
     /**
      * Index method
      *
      * @return void
      */
+    
     public function index()
     {
         $this->paginate = [
