@@ -13,6 +13,12 @@
  * @since         0.10.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+$loguser = $this->request->session()->read('Auth.User');
+$user='';
+if($loguser) {
+    $user = $loguser['user'];
+}
+
 
 
 $cakeDescription = 'CakePHP: the rapid development php framework';
@@ -48,9 +54,20 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <!--TODO
                 Logout bottom
                 -->
-                <li></li>
-                <li></li>
-            </ul>
+                <li><a href="" style="font-weight:bold; font-size:16px;"><?php echo $user;?></a></li>
+                <li>
+                    <?php 
+                    if($this->request->session()->read('Auth.User')) {
+                        // user is logged in, show logout..user menu etc
+                        echo $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout']); 
+                        } else {
+                        // the user is not logged in
+                            
+                        }
+                    ?>
+                    
+                </li>
+            <id/ul>
         </section>
     </nav>
     <?= $this->Flash->render() ?>
