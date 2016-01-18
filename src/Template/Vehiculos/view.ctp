@@ -1,12 +1,12 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Vehiculo'), ['action' => 'edit', $vehiculo->id]) ?> </li>
+        <li><?= $this->Html->link(__('Editar Vehiculo'), ['action' => 'edit', $vehiculo->id]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Vehiculo'), ['action' => 'delete', $vehiculo->id], ['confirm' => __('Are you sure you want to delete # {0}?', $vehiculo->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Vehiculos'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Vehiculo'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Garantias'), ['controller' => 'Garantias', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Garantia'), ['controller' => 'Garantias', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('Lista de Vehiculos'), ['action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Nueva Vehiculo'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('Lista de Garantias'), ['controller' => 'Garantias', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Nueva Garantia'), ['controller' => 'Garantias', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="vehiculos view large-9 medium-8 columns content">

@@ -1,12 +1,12 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Cuota'), ['action' => 'edit', $cuota->id]) ?> </li>
+        <li><?= $this->Html->link(__('Editar Cuota'), ['action' => 'edit', $cuota->id]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Cuota'), ['action' => 'delete', $cuota->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cuota->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Cuotas'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Cuota'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Prestamos'), ['controller' => 'Prestamos', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Prestamo'), ['controller' => 'Prestamos', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('Lista de  Cuotas'), ['action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Nueva Cuota'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('Lista de Prestamos'), ['controller' => 'Prestamos', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Nuevo Prestamo'), ['controller' => 'Prestamos', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="cuotas view large-9 medium-8 columns content">

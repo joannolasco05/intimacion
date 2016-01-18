@@ -7,11 +7,11 @@
                 ['confirm' => __('Are you sure you want to delete # {0}?', $intimacione->id)]
             )
         ?></li>
-        <li><?= $this->Html->link(__('List Intimaciones'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Prestamos'), ['controller' => 'Prestamos', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Prestamo'), ['controller' => 'Prestamos', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Clientes'), ['controller' => 'Clientes', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Cliente'), ['controller' => 'Clientes', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Lista de Intimaciones'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Lista de Prestamos'), ['controller' => 'Prestamos', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Nuevo Prestamo'), ['controller' => 'Prestamos', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Lista de Clientes'), ['controller' => 'Clientes', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Nuevo Cliente'), ['controller' => 'Clientes', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="intimaciones form large-9 medium-8 columns content">

@@ -1,10 +1,10 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Fiadore'), ['action' => 'edit', $fiadore->id]) ?> </li>
+        <li><?= $this->Html->link(__('Editar Fiador'), ['action' => 'edit', $fiadore->id]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Fiadore'), ['action' => 'delete', $fiadore->id], ['confirm' => __('Are you sure you want to delete # {0}?', $fiadore->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Fiadores'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Fiadore'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('Lista de Fiadores'), ['action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Nuevo Fiadore'), ['action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="fiadores view large-9 medium-8 columns content">

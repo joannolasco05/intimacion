@@ -7,9 +7,9 @@
                 ['confirm' => __('Are you sure you want to delete # {0}?', $vehiculo->id)]
             )
         ?></li>
-        <li><?= $this->Html->link(__('List Vehiculos'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Garantias'), ['controller' => 'Garantias', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Garantia'), ['controller' => 'Garantias', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Lista de Vehiculos'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Lista de Garantias'), ['controller' => 'Garantias', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Nueva Garantia'), ['controller' => 'Garantias', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="vehiculos form large-9 medium-8 columns content">
