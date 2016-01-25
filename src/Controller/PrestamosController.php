@@ -51,6 +51,7 @@ class PrestamosController extends AppController
         $prestamo = $this->Prestamos->newEntity();
         if ($this->request->is('post')) {
             $prestamo = $this->Prestamos->patchEntity($prestamo, $this->request->data);
+            $prestamo->id = $this->request->data["codigo_prestamo"];
             if ($this->Prestamos->save($prestamo)) {
                 $this->Flash->success(__('The prestamo has been saved.'));
                 return $this->redirect(['action' => 'index']);

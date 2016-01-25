@@ -19,6 +19,7 @@
     <fieldset>
         <legend><?= __('Add Prestamo') ?></legend>
         <?php
+            echo $this->Form->input('codigo_prestamo');
             echo $this->Form->input('cliente_id', ['options' => $clientes]);
             echo $this->Form->input('monto_solicitado');
             echo $this->Form->input('monto_aprobado');
