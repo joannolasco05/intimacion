@@ -51,6 +51,9 @@
     </div>
     <div style='text-align:center'>
         <?= $this->Form->button('Iniciar Proceso de Intimacion') ?>
+       <button type="submit" formaction="/intimacion/PDFs/viewpdf" formtarget="_blanck">Imprimir</button>
+        
+
     </div>
     <?= $this->Form->end() ?>
 </div>
