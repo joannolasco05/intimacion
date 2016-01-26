@@ -4,8 +4,7 @@
         <li><?= $this->Html->link(__('Editar Intimaciones'), ['action' => 'edit', $intimacione->id]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Intimacione'), ['action' => 'delete', $intimacione->id], ['confirm' => __('Are you sure you want to delete # {0}?', $intimacione->id)]) ?> </li>
         <li><?= $this->Html->link(__('Lista de Intimaciones'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('Nueva Intimacion'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('Lista de Prestamos'), ['controller' => 'Prestamos', 'action' => 'index']) ?> </li>
+               <li><?= $this->Html->link(__('Lista de Prestamos'), ['controller' => 'Prestamos', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('Nuevo Prestamo'), ['controller' => 'Prestamos', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('Lista de Clientes'), ['controller' => 'Clientes', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('Nuevo Cliente'), ['controller' => 'Clientes', 'action' => 'add']) ?> </li>
