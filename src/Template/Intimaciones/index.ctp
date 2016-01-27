@@ -45,4 +45,7 @@
         </ul>
         <p><?= $this->Paginator->counter() ?></p>
     </div>
+    <div style='text-align:center'>
+         <button type="submit" formaction="/intimacion/PDFs/viewpdf" formtarget="_blanck">Imprimir</button>
+        </div>
 </div>
